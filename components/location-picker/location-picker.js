@@ -9,10 +9,10 @@ class LocationPicker {
     render(){
 
         return `   
-        <form type="submit" class="picker__container">
+        <form action="" class="picker__container">
             ${this.lat.render()}
             ${this.long.render()}
-            <button class="picker__button">READY</button>
+            <button type="submit" class="picker__button">READY</button>
         </form>`
     }
 

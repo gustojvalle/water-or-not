@@ -5,8 +5,16 @@ body, html{
 
 *, *::after, *::before{
     padding: 0; 
-    margin: auto;
+    margin: 0;
     box-sizing: border-box;
+}
+
+@keyframes rotating {
+    from {
+        rotate: 0;
+    } to {
+        rotate: 360*4deg;
+    }
 }
 
 
@@ -17,6 +25,7 @@ body, html{
     align-items: center;
     justify-content: center;
     height: 90vh;
+    position: relative;
 }
 
 .slider{   
@@ -50,9 +59,10 @@ body, html{
 
 .picker__container{
     width: 90%;
+    height: 60vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -62,4 +72,99 @@ body, html{
     flex-direction: column;
     align-items: center;
     width: 100%;
+}
+
+
+
+.toast{
+    padding: 0 1rem;
+    border-radius: 1rem;
+    justify-content: space-evenly;
+    box-shadow: 2px 2px 10px #638475;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    height: 40%;
+    width: 90%;
+    background-color: #333138;
+    flex-direction: column;
+
+    @media (min-width:1280px) {
+        width: 20rem;
+    }
+
+    &__message{
+        color: #FFFFFA;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    &__button{
+        width: 5rem;
+        height: 3rem;
+        border-radius: 1rem;
+        border: none;
+        background-color: #DB324D;
+        color: #FFFFFA ;
+
+    }
+
+}
+
+.navbar{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    background-color: #333138;
+
+    &__list{
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+    &__item{
+        display: inline;
+        color:#FFFFFA;
+    }
+}
+
+
+a{
+    text-decoration: none;
+    color: #FFFFFA;
+}
+
+
+
+#if-water {
+    display: none;
+}
+#no-water{
+    display: none;
+}
+
+.waiting{
+    @extend .toast;
+    display: none;
+
+
+
+    &__svg{
+        width:15rem;
+        height: auto;
+        &--animate{
+            animation: rotating 4s normal;
+        }
+    }
+
+    
+    
+}
+
+
+
+#error{
+    display: none;
 }
