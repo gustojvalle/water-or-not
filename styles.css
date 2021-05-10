@@ -12,9 +12,11 @@ body, html {
   from {
     rotate: 0;
     -webkit-transform: rotateZ(0);
+    -moz-transform: rotateZ(0);
   }
   to {
-    -webkit-transform: rotateZ(1440);
+    -webkit-transform: rotateZ(1440deg);
+    -moz-transform: rotateZ(1440deg);
     rotate: 1440deg;
   }
 }
@@ -23,9 +25,11 @@ body, html {
   from {
     rotate: 0;
     -webkit-transform: rotateZ(0);
+    -moz-transform: rotateZ(0);
   }
   to {
-    -webkit-transform: rotateZ(1440);
+    -webkit-transform: rotateZ(1440deg);
+    -moz-transform: rotateZ(1440deg);
     rotate: 1440deg;
   }
 }
@@ -161,7 +165,7 @@ a {
 }
 .waiting__svg--animate {
   -webkit-animation: rotating 4s normal;
-  animation: rotating 4s normal;
+          animation: rotating 4s normal;
 }
 
 #error {
