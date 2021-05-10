@@ -11,8 +11,10 @@ body, html {
 @-webkit-keyframes rotating {
   from {
     rotate: 0;
+    -webkit-transform: rotateZ(0);
   }
   to {
+    -webkit-transform: rotateZ(1440);
     rotate: 1440deg;
   }
 }
@@ -20,8 +22,10 @@ body, html {
 @keyframes rotating {
   from {
     rotate: 0;
+    -webkit-transform: rotateZ(0);
   }
   to {
+    -webkit-transform: rotateZ(1440);
     rotate: 1440deg;
   }
 }
@@ -43,6 +47,10 @@ body, html {
 }
 .slider::-webkit-slider-thumb {
   background: url(./assets/icons/f00uly.svg);
+  width: 2rem;
+  height: 2rem;
+  background: url(./assets/icons/f00uly.svg);
+  border: none;
 }
 .slider::-moz-range-thumb {
   width: 2rem;
@@ -153,7 +161,7 @@ a {
 }
 .waiting__svg--animate {
   -webkit-animation: rotating 4s normal;
-          animation: rotating 4s normal;
+  animation: rotating 4s normal;
 }
 
 #error {
